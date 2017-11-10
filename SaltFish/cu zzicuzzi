@@ -1,0 +1,11 @@
+var1="23455"
+list1=[]
+list2=[]
+total=0
+for i in var1:
+    list1.append(i)
+    list2.append(int(i))
+print(list1)
+print(list2)
+total+=list2[i]
+print(total)
