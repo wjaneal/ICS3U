@@ -34,11 +34,14 @@ dt = 360
 #Solar System Data:
 G = 6.67*10**(-11)# *1.01#Gravity
 M = 5.98*10**(24)
+#M = 4.867*10**24
 MS = 1.99*10**(30)
+
 #Circumference of Earth Orbit
 C = 2*PI*1.49*10**(11)
+#C = 2*PI*1.0802*10**9
 #1 Year in seconds:
-T = 365.25*24.0*3600.0
+T = 365*24.0*3600.0
 #Speed of Earth Orbit:
 v = C/T # Speed
 
@@ -48,6 +51,7 @@ X = 0.0
 Y = 0.0
 #Earth
 x = 1.49*10**(11) #R
+x = 1.0802*10**9
 y = 0
 
 #Initial Velocity Data

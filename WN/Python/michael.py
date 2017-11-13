@@ -1,4 +1,4 @@
-from visual import *
+from vpython import *
 scene.width = 1280
 scene.height = 720
 scene.autoscale = 0

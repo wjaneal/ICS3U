@@ -28,7 +28,7 @@ ball = sphere(pos=vector(0,0,0), radius=1, opacity = 0.4)
 #Calculate the path of the fly using a loop 
 for t in range(1,20000):
 	#Calculate the new angles based on the scale
-	Phi = 3*t*Scale
+	Phi = 4*t*Scale
 	Theta = t*Scale
 	#Determine the (x,y,z) Coordinates using the transformation function:
 	Coords = Spherical_to_Cartesian(1.0,Theta,Phi)
