@@ -1,3 +1,7 @@
+#Individual Computer Programming Plan - Emma
+#Name: Emmatap
+#Topic: Music
+#Notes: A specific sound appears when pressing a button( bgm keeps playing constantly)
 #Read - import required modules
 import tkinter
 import sys
@@ -29,9 +33,9 @@ class MenuBar(tkinter.Menu):
         self.button8.grid(row=5,column=4)
         
     def __init__(self, parent):
-        helv14b = font.Font(family="Helvetica",size=14,weight="bold")
+        helv14b = font.Font(family="Helvetica",size=28,weight="bold")
         tkinter.Menu.__init__(self, parent)
-        musicMenu = tkinter.Menu(self, tearoff=False, font=helv14b)
+        musicMenu = tkinter.Menu(self, tearoff=False, font=helv14b, bg="pink")
         #self.add_cascade(label="File",underline=0, menu=fileMenu)
         #quadMenu.add_command(label="Exit", underline=1, command=self.quit)
         musicMenu.add_command(label="Emmatap", command=self.Emmatap)
