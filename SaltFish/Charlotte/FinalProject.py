@@ -1,5 +1,8 @@
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> Yolanda1
 #Individual Computer Programming Plan
 #Name: Charlotte Chen
 #Topic: Scanning Tunnelling Microscope
@@ -12,6 +15,9 @@
 =======
 Individual Computer Programming Plan
 >>>>>>> CharlotteC
+<<<<<<< HEAD
 =======
 
 >>>>>>> CharlotteC
+=======
+>>>>>>> Yolanda1
