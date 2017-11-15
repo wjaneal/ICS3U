@@ -7,4 +7,6 @@ bad and the cat will fall down).When the music is over or the cat falls down,
 game is over.These degrees are judged by the time range or the distance range.
 In China,there have been some music game such as Deemo and Cytus to be a
 reference.   
-	
+
+Dear Aeon:  This sounds like a great idea.  Please take a pygame tutorial to get started.
+
