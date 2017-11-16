@@ -20,7 +20,7 @@ root = Tk()
 frame = Frame(root)
 frame.pack()
 
-root.title('PIANO')
+root.title('BIANO')
 
 num1=StringVar()
 
