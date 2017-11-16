@@ -2,7 +2,7 @@
 """
 Created on Wed Nov 15 13:44:22 2017
 
-@author: callm
+@author: Teddy Bears
 """
 
 import pygame
