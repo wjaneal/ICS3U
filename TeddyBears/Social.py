@@ -2,7 +2,7 @@
 """
 Created on Wed Nov 15 13:32:41 2017
 
-@author: callm
+@author: Teddy Bears
 """
 
 from scipy.io import wavfile
@@ -15,6 +15,7 @@ import pygame as pg
 
 kb_file = open("my_keyboard.kb", 'w')
 
+<<<<<<< HEAD
 pg.init()
 screen = pg.display.set_mode((200, 200))
 print("Press the keys in the right order. Press Escape to finish.")
@@ -36,13 +37,32 @@ def speedx(snd_array, factor):
     indices = np.round(np.arange(0, len(snd_array), factor))
     indices = indices[indices < len(snd_array)].astype(int)
     return snd_array[indices]
+=======
+def value_Cs():
+    num1.set("C#")
+    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound.play()
+    return
+root = Tk()
+frame = Frame(root)
+frame.pack()
+
+root.title('BIANO')
+>>>>>>> 1c342e5f36fe28adf7e31230f569a613c7104a0c
 
 
+<<<<<<< HEAD
 def stretch(snd_array, factor, window_size, h):
     """ Stretches/shortens a sound, by some factor. """
     phase = np.zeros(window_size)
     hanning_window = np.hanning(window_size)
     result = np.zeros(len(snd_array) / factor + window_size)
+=======
+topframe = Frame(root)
+topframe.pack(side = TOP)
+txtDisplay=Entry(frame, textvariable = num1, bd=20, insertwidth =1, font=30, justify="center", width=4,)
+
+>>>>>>> 1c342e5f36fe28adf7e31230f569a613c7104a0c
 
     for i in np.arange(0, len(snd_array) - (window_size + h), h*factor):
         # Two potentially overlapping subarrays
