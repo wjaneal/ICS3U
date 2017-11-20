@@ -13,15 +13,19 @@ pygame.init()
 
 def value_Cs():
     num1.set("C#")
-    sound = pygame.mixer.Sound( "C:\User\callm\Desktop\G")
+    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
     sound.play()
     return
 root = Tk()
 frame = Frame(root)
 frame.pack()
 
-root.title('PIANO')
+root.title('BIANO')
 
 num1=StringVar()
+
+topframe = Frame(root)
+topframe.pack(side = TOP)
+txtDisplay=Entry(frame, textvariable = num1, bd=20, insertwidth =1, font=30, justify="center", width=4,)
 
 
