@@ -59,6 +59,10 @@ button4 = Button(topframe,padx=8, pady=8, height = 6, bd=8, text"D#1 ", bg="blac
 button4.pack(side =LEFT)
 
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8383b8fcafb7d5983e08b9326aaf0375cac5b940
 frame1 = Frame(root)
 frame1.pack( side = TOP )
 
