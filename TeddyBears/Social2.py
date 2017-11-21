@@ -37,6 +37,7 @@ button2 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="D# ", bg="blac
 button2.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=1, padx=0, pady=0, relief=RIDGE)
 button22.pack(side =LEFT)
+
 button3 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="F# ", bg="black",fg="white",command=value_Fs)
 button3.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=1, padx=0, pady=0, relief=RIDGE)
@@ -58,7 +59,10 @@ button4 = Button(topframe,padx=8, pady=8, height = 6, bd=8, text"D#1 ", bg="blac
 button4.pack(side =LEFT)
 
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 8383b8fcafb7d5983e08b9326aaf0375cac5b940
 frame1 = Frame(root)
 frame1.pack( side = TOP )
 
