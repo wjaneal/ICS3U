@@ -37,6 +37,7 @@ button2 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="D# ", bg="blac
 button2.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=1, padx=0, pady=0, relief=RIDGE)
 button22.pack(side =LEFT)
+
 button3 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="F# ", bg="black",fg="white",command=value_Fs)
 button3.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=1, padx=0, pady=0, relief=RIDGE)
@@ -56,3 +57,31 @@ button22 = Button(topframe, state=DISABLED, height = 7, width=4, padx=0, pady=0,
 button22.pack(side =LEFT)
 button4 = Button(topframe,padx=8, pady=8, height = 6, bd=8, text"D#1 ", bg="black",fg="white",command=value_Ds1)
 button4.pack(side =LEFT)
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> 8383b8fcafb7d5983e08b9326aaf0375cac5b940
+frame1 = Frame(root)
+frame1.pack( side = TOP )
+
+button1 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="C",fg="black",command=value_C)
+button1.pack(side =LEFT)
+button2 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="D",fg="black",command=value_D)
+button2.pack(side =LEFT)
+button3 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="E",fg="black",command=value_E)
+button3.pack(side =LEFT)
+button4 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="F",fg="black",command=value_F)
+button4.pack(side =LEFT)
+
+button5 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="G",fg="black",command=value_G)
+button5.pack(side =LEFT)
+button6 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="A",fg="black",command=value_A)
+button6.pack(side =LEFT)
+button7 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="B",fg="black",command=value_B)
+button7.pack(side =LEFT)
+button8 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="C1",fg="black",command=value_C1)
+button8.pack(side =LEFT)
+
+root.mainloop()
