@@ -79,3 +79,5 @@ button7 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="B",fg="black",c
 button7.pack(side =LEFT)
 button8 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="C1",fg="black",command=value_C1)
 button8.pack(side =LEFT)
+
+root.mainloop()
