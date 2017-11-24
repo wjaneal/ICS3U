@@ -21,7 +21,7 @@ for i in range(0,len(puzzle_grid)):
     if puzzle_grid[i]==0:
         possibilities_grid.append([1,2,3,4,5,6,7,8,9])
     else:
-        possibilities_grid.append(puzzle_grid[i])
+        possibilities_grid.append([puzzle_grid[i]])
         
 #Functions used to design row-by-row and column-by column operations
 def adjust_row(puzzle_grid, row):
@@ -55,9 +55,12 @@ def intersect(puzzle_grid, possibilities_grid, i, j):
     #Scan rows
     for square in range(0,size):
         if puzzle_grid[size*square+j] in possibilities_grid[size*square+j] and square!=i:
-            possibilities_grid[size*square+j].remove(puzzle_grid[size*i+square])            
+            possibilities_grid[size*square+j].remove(puzzle_grid[size*square+j])            
     for item in block_count(puzzle_grid, i, j ):
-        possibilities_grid[i,j].remove(item)
+        #print (block_count(puzzle_grid,i,j))
+        #print(i,j)
+        if item in possibilities_grid[i*size+j]:
+            possibilities_grid[i*size+j].remove(item)
 #Block counts
 def block_count(puzzle_grid, i,j):
     block_items = []
@@ -67,7 +70,8 @@ def block_count(puzzle_grid, i,j):
         for column in range(0,int(size/3)):
             if puzzle_grid[3*size*(block_row)+int(size/3)*block_column+size*row+column] not in block_items:
                 if int(size/3)*block_row+row != i or int(size/3)*block_column+column != j:
-                    blockitems.append(puzzle_grid[3*size*block_row_int(size/3)*block_column+size*row+column])
+                    if puzzle_grid[3*size*block_row+int(size/3)*block_column+size*row+column]!=0:
+                        block_items.append(puzzle_grid[3*size*block_row+int(size/3)*block_column+size*row+column])
     return block_items
             
 #Triple cross check
@@ -108,8 +112,10 @@ def number_in_other_columns(i,j,number):
 #Main Loop
 complete = False
 while not complete:
+    print ("Before")
     print(puzzle_grid, possibilities_grid)
     scan_cross_count(puzzle_grid, possibilities_grid)
+    print("After")
     print(puzzle_grid, possibilities_grid)
     complete = True
     #Scan cross counts
