@@ -14,7 +14,7 @@ Created on Thu Oct 12 13:19:48 2017
 @author: chenquancheng
 """
 
-
+import serial
 from tkinter import *
 import sys
 from tkinter import font
@@ -29,7 +29,7 @@ class Arduino(object):
         print (s, line)"""
 
     def connection(self):
-        pass
+        return serial.Serial('/dev/tty.usbmodem1441', baudrate=9600, timeout=0.1)
         #return  pyserial.Serial('COM3', baudrate=9600, timeout=0.1)
         
 Arduino_Conn = Arduino()
