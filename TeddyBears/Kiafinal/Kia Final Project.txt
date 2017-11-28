@@ -1,0 +1,12 @@
+My point for final project is to graph some shapes with Turtle Graphing using python. I wanna make it as complicated as I can work and understand the codes as well.
+
+
+Dear Kia:
+
+This sounds like a great idea.  It needs to be refined so that you have a specific goal. Might you formulate a plan like the following?
+
+(1) Learn the features of Turtle.
+(2) Write a program that allows the user to draw a complex turtle graph by adjusting a few parameters such as length, angles, colour, etc.
+(3) Create a GUI to package the program neatly.
+
+
