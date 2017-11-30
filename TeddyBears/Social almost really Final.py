@@ -6,98 +6,98 @@ Created on Mon Nov 20 13:20:43 2017
 """
 
 import pygame
-#import sys
-#from tkinter import *
+import sys
+from tkinter import *
 pygame.init()
 
 def value_Cs():
     num1.set("C#")
-    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\c1.wav")
     sound.play()
     return
 def value_Ds():
     num1.set("D#")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\d1.wav")
     sound.play()
     return
 def value_Fs():
     num1.set("F#")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\f1.wav")
     sound.play()
     return
 def value_Gs():
     num1.set("G#")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\g1.wav")
     sound.play()
     return
 def value_Bb():
     num1.set("Bb")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\b1.wav")
     sound.play()
     return
 def value_Cs1():
     num1.set("C#1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\c1s.wav")
     sound.play()
     return
 def value_Ds1():
     num1.set("D#1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\d1s .wav")
     sound.play()
     return
 def value_C():
     num1.set("C")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_D():
     num1.set("D")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_E():
     num1.set("E")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_F():
     num1.set("F")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_G():
     num1.set("G")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_A():
     num1.set("A")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_B():
     num1.set("B")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_C1():
     num1.set("C1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_D1():
     num1.set("D1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_E1():
     num1.set("E1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_F1():
     num1.set("F1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\aiyucheng.mp3")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 
@@ -166,4 +166,4 @@ button10.pack(side =LEFT)
 button11 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="F1",fg="black",command=value_F1)
 button11.pack(side =LEFT)
 
-#root.mainloop()
+root.mainloop()
