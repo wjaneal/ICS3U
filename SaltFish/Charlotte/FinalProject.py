@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Yolanda1
 #Individual Computer Programming Plan
 #Name: Charlotte Chen
 #Topic: Scanning Tunnelling Microscope
@@ -12,12 +7,4 @@
   #Displays a graph according to the simulation program(input program)
   #Connects to Arduino
 
-=======
-Individual Computer Programming Plan
->>>>>>> CharlotteC
-<<<<<<< HEAD
-=======
 
->>>>>>> CharlotteC
-=======
->>>>>>> Yolanda1
