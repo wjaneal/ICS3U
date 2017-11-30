@@ -172,7 +172,12 @@ class MenuBar(Menu):
         filemenu = Menu(self, tearoff=0) 
         filemenu.add_command(label="Start", command=self.start) 
         filemenu.add_command(label="Exit", command=self.quit)
-        self.add_cascade(label="Game", menu=filemenu)
+        self.canvas = Canvas(parent,width=1000,height=1000,bg="white")
+        self.filename=PhotoImage(master=self.canvas, file="deal.gif")
+        self.image1=self.canvas.create_image(500,300,image=self.filename)
+        self.canvas.pack()
+
+       
     
     def start(self):
         self.filewin3=Toplevel(self)

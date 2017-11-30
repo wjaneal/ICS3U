@@ -2,39 +2,31 @@
 # -*- coding: utf-8 -*-
 """
 Created on Thu Oct 12 22:31:36 2017
-
 @author: chenquancheng
 """
-
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Oct 12 13:19:48 2017
-
-@author: chenquancheng
-"""
-
 import serial
 from tkinter import *
 import sys
 from tkinter import font
 import math
 
-class Arduino(object):
+class MenuBar(Menu):
+    #class Arduino():
+    
+   # def __init__(self):
+        #self.connection1 = None
+   
     def writechar(self, char):
         print ("Sending ", char, " to the Arduino")
-        """self.connection1.write(char)
+        #self.connection1.println(char)
+        self.connection1.write(char)
         s = self.connection1.read(21)        # read up to ten bytes (timeout)
         line = self.connection1.readline()   # read a '\n' terminated line
-        print (s, line)"""
+        print (s, line)
 
     def connection(self):
-        return serial.Serial('/dev/tty.usbmodem1441', baudrate=9600, timeout=0.1)
+        return serial.Serial('/dev/tty.usbmodem1461', baudrate=9600, timeout=0.1)
         #return  pyserial.Serial('COM3', baudrate=9600, timeout=0.1)
-        
-Arduino_Conn = Arduino()
-
-class MenuBar(Menu):
     def new(self):
         helv18b = font.Font(family="Helvetica",size=18,weight="bold")
         helv16 = font.Font(family="Helvetica",size=16,weight="bold")
@@ -111,20 +103,27 @@ class MenuBar(Menu):
         arduinomenu.add_command(label="Disconnect",command=self.disconnect)
         self.add_cascade(label="Arduino",menu=arduinomenu)
         
+        
+    
     def connect(self):
         print ("The connection to the arduino is being established")
-        Arduino_Conn.connection1 = Arduino_Conn.connection()
-        Arduino_Conn.writechar("A255")
+        self.connection1 = self.connection()
+        self.writechar(b"A255")
         print ("The connection seems to have been established")
-    
+        #self.filewin2=Toplevel(self)
+        #self.turnon=Button(self.filewin2,text="turn on",command=self.writechar(b"A")).grid(row=0,column=0)
+        #self.turnon=Button(self.filewin2,text="turn off",command=self.writechar(b"B")).grid(row=0,column=1)
+        
     def disconnect(self):
-        Arduino_Conn.connection1.flushInput()
-        Arduino_Conn.connection1.flushOutput()
-        Arduino_Conn.connection1.close()
+        self.connection1.flushInput()
+        self.connection1.flushOutput()
+        self.connection1.close()
         print ("Disconnected")
         
     def quit(self):
         app.destroy()
+
+
           
 #Main class - calls menubar class
 class App(Tk):
@@ -133,6 +132,7 @@ class App(Tk):
         menubar = MenuBar(self)
         self.config(menu=menubar)
 
+#Arduino_Conn = MenuBar.Arduino()
 
 #Start the program:
 if __name__ == "__main__":
