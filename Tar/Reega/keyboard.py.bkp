@@ -9,7 +9,7 @@ import pygame
 import sys
 from tkinter import *
 
-pygame.int()
+pygame.init()
 def value_C4():
     num1.set("C4")
     sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-C4.mp3")
