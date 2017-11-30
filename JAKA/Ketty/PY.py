@@ -161,4 +161,4 @@ while 1:
         if event.key == pygame.K_n:  
             restart = False  
             break  
-    pygame.display.update()  
+    pygame.display.update() 
