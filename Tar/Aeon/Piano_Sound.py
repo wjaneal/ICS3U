@@ -29,7 +29,11 @@ def value_D4():
     return                           
 def value_D4s():
     num1.set("D4s")
+<<<<<<< HEAD
     sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-D4#.mp3") 
+=======
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-D4#.mp3")
+>>>>>>> Reega2
     sound.play()
     return                           
 def value_E4():
