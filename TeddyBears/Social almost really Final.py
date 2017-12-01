@@ -4,109 +4,107 @@ Created on Mon Nov 20 13:20:43 2017
 
 @author: callm
 """
+
 import pygame
 import sys
 from tkinter import *
-
 pygame.init()
-pygame.mixer.init()
-
 
 def value_Cs():
     num1.set("C#")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\Music\\3406_danses_sacre_et_profane_1-af2e31f9-816c-4e35-91be-3b7b5591797c.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\c1.wav")
     sound.play()
     return
 def value_Ds():
     num1.set("D#")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\Music\\3426_draeseke_puzzle1-f2f4cbe4-0312-4dd5-b3e7-92a39e005887.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\d1.wav")
     sound.play()
     return
 def value_Fs():
     num1.set("F#")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\f1.wav")
     sound.play()
     return
 def value_Gs():
     num1.set("G#")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle2-9034a127-b137-41c2-9bd0-0c6575fdba8e.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\g1.wav")
     sound.play()
     return
 def value_Bb():
     num1.set("Bb")
-    sound = pygame.mixer.Sound("‪C:\\Users\\fy\\Music\\Daybreak (GoPro HERO3 Edit) - Overwerk.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\b1.wav")
     sound.play()
     return
 def value_Cs1():
     num1.set("C#1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle3-d9e382fb-08fd-4a5f-bc82-5109f3d040fb.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\c1s.wav")
     sound.play()
     return
 def value_Ds1():
     num1.set("D#1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle4-9bfcbe30-af5d-43f3-9f26-4dea55cd2282.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\d1s .wav")
     sound.play()
     return
 def value_C():
     num1.set("C")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle5-dd000438-fa1e-4f42-8488-399dc77fa412.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_D():
     num1.set("D")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle6-72f0f018-5285-47b6-a927-8a3605e87278.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_E():
     num1.set("E")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_F():
     num1.set("F")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_G():
     num1.set("G")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_A():
     num1.set("A")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_B():
     num1.set("B")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_C1():
     num1.set("C1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_D1():
     num1.set("D1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_E1():
     num1.set("E1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 def value_F1():
     num1.set("F1")
-    sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.wav")
+    sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
 
 root = Tk()
 frame = Frame(root)
 frame.pack()
-root.title('BIANO')
+root.title('PIANO')
 num1=StringVar()
 topframe = Frame(root)
 topframe.pack(side = TOP)
@@ -121,7 +119,6 @@ button2 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="D# ", bg="blac
 button2.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=1, padx=0, pady=0, relief=RIDGE)
 button22.pack(side =LEFT)
-
 button3 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="F# ", bg="black",fg="white",command=value_Fs)
 button3.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=1, padx=0, pady=0, relief=RIDGE)
@@ -130,7 +127,6 @@ button4 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="G# ", bg="blac
 button4.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=1, padx=0, pady=0, relief=RIDGE)
 button22.pack(side =LEFT)
-
 button2 = Button(topframe,padx=8, pady=8, height = 6, bd=8, text="Bb ", bg="black",fg="white",command=value_Bb)
 button2.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=4, padx=0, pady=0, relief=RIDGE)
@@ -141,7 +137,6 @@ button22 = Button(topframe, state=DISABLED, height = 7, width=4, padx=0, pady=0,
 button22.pack(side =LEFT)
 button4 = Button(topframe,padx=8, pady=8, height = 6, bd=8, text="D#1 ", bg="black",fg="white",command=value_Ds1)
 button4.pack(side =LEFT)
-
 
 frame1 = Frame(root)
 frame1.pack( side = TOP )
@@ -164,7 +159,6 @@ button7.pack(side =LEFT)
 button8 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="C1",fg="black",command=value_C1)
 button8.pack(side =LEFT)
 
-
 button9 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="D1",fg="black",command=value_D1)
 button9.pack(side =LEFT)
 button10 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="E1",fg="black",command=value_E1)
@@ -173,4 +167,3 @@ button11 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="F1",fg="black"
 button11.pack(side =LEFT)
 
 root.mainloop()
-
