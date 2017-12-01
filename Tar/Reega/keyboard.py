@@ -9,125 +9,125 @@ import pygame
 import sys
 from tkinter import *
 
-pygame.int()
+pygame.init()
 def value_C4():
     num1.set("C4")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-C4.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/40-C4.wav")
     sound.play()
     return
 def value_C4s():
     num1.set("C4s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-C4#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/41-C4#.wav")
     sound.play()
     return                           
 def value_D4():
     num1.set("D4")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-D4.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/42-D4.wav")
     sound.play()
     return                           
 def value_D4s():
     num1.set("D4s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-D4#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/43-D4#.wav")
     sound.play()
     return                           
 def value_E4():
     num1.set("E4")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-E4.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/44-E4.wav")
     sound.play()
     return                           
 def value_F4():
     num1.set("F4")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-F4.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/45-F4.wav")
     sound.play()
     return
 def value_F4s():
     num1.set("F4s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-F4#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/46-F4#.wav")
     sound.play()
     return
 def value_G4():
     num1.set("G4")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-G4.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/47-G4.wav")
     sound.play()
     return
 def value_G4s():
     num1.set("G4s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-G4#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/48-G4#.wav")
     sound.play()
     return
 def value_A4():
     num1.set("A4")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-A4.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/49-A4.wav")
     sound.play()
     return
 def value_A4s():
     num1.set("A4s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-A4#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/50-A4#.wav")
     sound.play()
     return
 def value_B4():
     num1.set("B4")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-B4.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/51-B4.wav")
     sound.play()
     return
 def value_C5():
     num1.set("C5")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-C5.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/52-C5.wav")
     sound.play()
     return
 def value_C5s():
     num1.set("C5s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-C5#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/53-C5#.wav")
     sound.play()
     return
 def value_D5():
     num1.set("D5")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-D5.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/54-D5.wav")
     sound.play()
     return
 def value_D5s():
     num1.set("D5s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-D5#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/55-D5#.wav")
     sound.play()
     return
 def value_E5():
     num1.set("E5")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-E5.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/56-E5.wav")
     sound.play()
     return
 def value_F5():
     num1.set("F5")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-F5.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/57-F5.wav")
     sound.play()
     return
 def value_F5s():
     num1.set("F5s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-F5#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/58-F5#.wav")
     sound.play()
     return
 def value_G5():
     num1.set("G5")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-G5.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/59-G5.wav")
     sound.play()
     return
 def value_G5s():
     num1.set("G5s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-G5#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/60-G5#.wav")
     sound.play()
     return
 def value_A5():
     num1.set("A5")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-A5.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/61-A5.wav")
     sound.play()
     return
 def value_A5s():
     num1.set("A5s")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-A5#.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/62-A5#.wav")
     sound.play()
     return
 def value_B5():
     num1.set("B5")
-    sound = pygame.mixer.Sound("Desktop/Piano_Keys_mp3/piano_keys_soundMP3/40-B5.mp3")
+    sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/63-B5.wav")
     sound.play()
     return
 root = Tk()
@@ -139,8 +139,8 @@ root.title('PIANO')
 num1=StringVar()
 
 topframe = Frame(root)
-topframe.pack(side = Top)
-txtDisplay=Entry(frame,textvarable = num1,bd=20,insertwidth =1,font =30, justify= 'center', width=4)
+topframe.pack()
+txtDisplay=Entry(frame,textvariable = num1,bd=20,insertwidth =1,font =30, justify= 'center', width=4)
 txtDisplay.pack( side = TOP)
 
 button1 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="C4# ",bg="black",fg="white",command=value_C4s)
@@ -151,11 +151,11 @@ button2 = Button(topframe,padx=8,pady=8, height = 6, bd=8, text="D4# ",bg="black
 button2.pack(side =LEFT)
 button22 = Button(topframe,state=DISABLED, height = 7, width=4, padx=0,pady=0, relief=RIDGE )
 button22.pack(side =LEFT)
-button3 = Button(topframe,padx=8,pady=8, height = 6, bd=8, text="F4#",bg="black",fg="white",command=value_Fs4)
+button3 = Button(topframe,padx=8,pady=8, height = 6, bd=8, text="F4#",bg="black",fg="white",command=value_F4s)
 button3.pack(side =LEFT)
 button22 = Button(topframe,state=DISABLED, height = 7, width=1, padx=0,pady=0, relief=RIDGE )
 button22.pack(side =LEFT)
-button4 = Button(topframe,padx=8,pady=8, height = 6, bd=8, text="G4# ",bg="black",fg="white",command=value_Gs1)
+button4 = Button(topframe,padx=8,pady=8, height = 6, bd=8, text="G4# ",bg="black",fg="white",command=value_G4s)
 button4.pack(side =LEFT)
 button22 = Button(topframe,state=DISABLED, height = 7, width=1, padx=0,pady=0, relief=RIDGE )
 button22.pack(side =LEFT)
