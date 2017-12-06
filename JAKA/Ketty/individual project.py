@@ -10,13 +10,13 @@ if kind == "1":
     e = 0
     for i in range(0,j):
         print ("Round",i+1,":")
-        a = input("Scissors, Rock and Paper! Your choice:")
+        a = input("Scissors, rock and paper! Your choice:")
         b = int(random.random()*3)
-        if a == "S" or a == "s":
+        if a == "S":
             a = 0
-        if a == "R" or a == "r":
+        if a == "R":
             a = 1
-        if a == "P" or a == "p":
+        if a == "P":
             a = 2
         if a == 0 and b == 1:
             print ("Your choice is scissors, computer's choice is rock. You lose!")
