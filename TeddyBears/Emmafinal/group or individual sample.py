@@ -29,7 +29,8 @@ block_color = (53,115,255)
 
 Mario_width = 73
 
-gameDisplay = pygame.display.set_caption("Emma's Game")
+gameDisplay = pygame.display.set_mode((display_width,display_height))
+pygame.display.set_caption("Emma's Game")
 clock = pygame.time.Clock()
 
 MarioImg = pygame.image.load("C:\\Users\\fy\\Documents\\ICS3U\\TeddyBears\\Emmafinal\\Mario.gif")
@@ -37,3 +38,8 @@ gameIcon = pygame.image.load("C:\\Users\\fy\\Documents\\ICS3U\\TeddyBears\\Emmaf
 
 pygame.display.set_icon(gameIcon)
 
+pause = False
+#crash = True
+
+def things_dodged(count):
+    font = p
