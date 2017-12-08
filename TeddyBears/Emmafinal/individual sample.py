@@ -91,7 +91,7 @@ def button(msg,x,y,w,h,ic,ac,action=None):
         pygame.draw.rect(gameDisplay, ic,(x,y,w,h))
     smallText = pygame.font.SysFont("comicsanms",20)
     textSurf, textRect = test_objects(msg, smallText)
-    textRect.center = ((x+(w/2),(y+(h/2)))
+    textRect.center = ((x+(w/2),(y+(h/2))))
     gameDisplay.blit(textSurf, textRect)
 
 def quitgame():
@@ -142,6 +142,24 @@ def game_intro():
         
         pygame.display.update()
         clock.tick(15)
+        
+def run(self):
+    self.screen.fill((255,255,255))
+    while True:
+        # max fps limit
+        self.clock.tick(30)
+        for event in pygame.event.get():
+            if event.type== QUIT:
+                return
+            elif event.type== KEYDOWN:
+                pass
+            elif event.type== MOUSEBUTTONDOWN:
+                pass
+            elif event.type== MOUSEMOTION:
+                pass
+            elif event.type== MOUSEBUTTONUP:
+                pass
+        pygame.display.update()
         
         
 def game_loop():
