@@ -61,7 +61,6 @@ def text_objects(text, font):
 def crash():
     
     pygame.mixer.music.stop()
-    pygame.mixer.Sound.play(crash_sound)
     
     largeText = pygame.font.SysFont("comicsansms",115)
     TextSurf, TextRect = text_objects("You crashed", largeText)
@@ -142,24 +141,6 @@ def game_intro():
         
         pygame.display.update()
         clock.tick(15)
-        
-def run(self):
-    self.screen.fill((255,255,255))
-    while True:
-        # max fps limit
-        self.clock.tick(30)
-        for event in pygame.event.get():
-            if event.type== QUIT:
-                return
-            elif event.type== KEYDOWN:
-                pass
-            elif event.type== MOUSEBUTTONDOWN:
-                pass
-            elif event.type== MOUSEMOTION:
-                pass
-            elif event.type== MOUSEBUTTONUP:
-                pass
-        pygame.display.update()
         
         
 def game_loop():
