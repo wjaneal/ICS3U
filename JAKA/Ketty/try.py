@@ -26,10 +26,5 @@ C5 = Checkbutton(top, text = "Blue", variable = CheckVar5, \
 C6 = Checkbutton(top, text = "Red", variable = CheckVar6, \
  onvalue = 1, offvalue = 0, height=5, \
  width = 20)
-C1.pack()
-C2.pack()
-C3.pack()
-C4.pack()
-C5.pack()
-C6.pack()
 top.mainloop()
+i
