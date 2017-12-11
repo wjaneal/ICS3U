@@ -7,7 +7,7 @@ Created on Fri Dec  8 13:36:56 2017
 
 """
 
-         sorting_animation.py
+GROUP FINAL EMMA:  sorting_animation.py
 
 A minimal sorting algorithm animation:
 Sorts a shelf of 10 blocks using insertion
@@ -21,8 +21,11 @@ stretched to rectangles by shapesize()
        To exit press space button
  ---------------------------------------
 """
-from turtle import *
+# Import required modules
+from turtle import * 
 import random
+import os
+os.system("C:\\Users\\fy\\Music\\Justin Mahar - Pumped.mp3")
 
 
 class Block(Turtle):
@@ -34,10 +37,10 @@ class Block(Turtle):
         self.shapesize(size * 1.5, 1.5, 2) # square-->rectangle
         self.fillcolor("black")
         self.st()
-
+#Highlight the block which is moving  
     def glow(self):
         self.fillcolor("pink")
-
+#If the block moves in correct order, it turns red.      
     def unglow(self):
         self.fillcolor("red")
 
@@ -86,7 +89,7 @@ class Shelf(list):
         y_offset = width / 2 * 20
         b.sety(self.y + y_offset)
         b.unglow()
-
+#Design about specific movements for all 4 sorts
 def isort(shelf):
     length = len(shelf)
     for i in range(1, length):
@@ -136,11 +139,11 @@ def randomize():
     show_text(instructions1)
     show_text(instructions2, line=1)
     enable_keys()
-
+#Display the word instructions to players
 def show_text(text, line=0):
     line = 20 * line
     goto(0,-250 - line)
-    write(text, align="center", font=("Newtimesroman", 20, "bold"))
+    write(text, align="center", font=("Newtimesroman", 20, ))
 
 def start_ssort():
     disable_keys()
@@ -191,7 +194,7 @@ def enable_keys():
     onkey(start_qsort, "q")
     onkey(randomize, "r")
     onkey(bye, "space")
-
+#Basics function preparing
 def main():
     getscreen().clearscreen()
     ht(); penup()
@@ -204,7 +207,7 @@ def main():
 
 instructions1 = "Press i for insertion sort, s for selection sort, "
 instructions2 = "q for quicksort, spacebar to quit, r to randomize"
-
+#Start the program
 if __name__=="__main__":
     msg = main()
     mainloop()
