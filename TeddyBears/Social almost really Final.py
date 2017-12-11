@@ -383,3 +383,12 @@ instructions2 = "q for quicksort, spacebar to quit, r to randomize"
 if __name__=="__main__":
     msg = main()
     mainloop()
+    
+    
+    
+    
+    
+    
+pygame tommy
+print ("WE PLAY A SONG , YOU GUESS EACH NOTE")
+PLAY 
