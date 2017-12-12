@@ -17,7 +17,7 @@ flag=0
 class MenuBar(Menu):
     def destroywin(self,filewinc):
         filewinc.destroy()
-    
+#instruction introductiob
     def start2(self):
         self.filewin3.destroy()
         self.filewin2 = Toplevel(self)
@@ -39,6 +39,7 @@ class MenuBar(Menu):
             self.Label26[i].grid(row=7+int(i/5),column=(i%5))
         #self.Label1 = Label(filewin,text=self.Cases[0])
         #self.Label1.grid(row=6,column=0)
+        #create buttons for the cases
         self.Button1 = Button(filewin,text="Case 1",bg="lightgreen",command=lambda:self.open_case(self.Button1,self.money[0],self.Label26[25]))
         self.Button1.grid(row=0,column=0)
         self.Button2 = Button(filewin,text="Case 2",bg="lightgreen",command=lambda:self.open_case(self.Button2,self.money[1],self.Label26[24]))
@@ -103,6 +104,7 @@ class MenuBar(Menu):
             self.sum+=self.Cases[i]
         self.offer=self.sum/len(self.Cases)
         self.offer1.set(int(self.offer))
+        #display the bank's offer
         self.label1=Label(self.filewin1,text="Hi,this is the bank",bg="lightgreen").grid(row=0,column=0)
         self.label2=Label(self.filewin1,text="We would like to offer you an offer of $",bg="lightgreen").grid(row=1,column=0)
         self.offerlabel=Label(self.filewin1,textvariable=self.offer1).grid(row=1,column=1)
@@ -172,6 +174,7 @@ class MenuBar(Menu):
         filemenu = Menu(self, tearoff=0) 
         filemenu.add_command(label="Start", command=self.start) 
         filemenu.add_command(label="Exit", command=self.quit)
+        self.add_cascade(label="File",menu=filemenu)
         self.canvas = Canvas(parent,width=1000,height=1000,bg="white")
         self.filename=PhotoImage(master=self.canvas, file="deal.gif")
         self.image1=self.canvas.create_image(500,300,image=self.filename)
