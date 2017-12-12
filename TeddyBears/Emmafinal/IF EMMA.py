@@ -9,6 +9,7 @@ INDIVIDUAL EMMA'S GAME: MARIO RACEY
 
 
 '''
+#Import required modules
 import pygame
 import time
 import random
@@ -18,7 +19,7 @@ pygame.init()
 beginning_sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle5-dd000438-fa1e-4f42-8488-399dc77fa412.wav")
 display_width = 800
 display_height = 600
-
+#setting of colors required
 black = (0,0,0)
 white = (255,255,255)
 
@@ -60,10 +61,10 @@ def text_objects(text, font):
     return textSurface, textSurface.get_rect()
 
 
-
+#Define ending consequense
 def crash():
     
-    pygame.mixer.music.stop()
+    #pygame.mixer.music.stop()
     
     largeText = pygame.font.SysFont("comicsansms",115)
     TextSurf, TextRect = text_objects("You crashed", largeText)
@@ -138,7 +139,7 @@ def game_intro():
         TextSurf, TextRect = text_objects("Emma's game", largeText)
         TextRect.center = ((display_width/2),(display_height/2))
         gameDisplay.blit(TextSurf, TextRect) 
-        
+        #Choices setting
         button("GO!",150,450,100,50,green,bright_green,game_loop)
         button("Quit",550,450,100,50,red,bright_red,quitgame)
         
