@@ -4,6 +4,11 @@ Created on Mon Nov 20 13:20:43 2017
 
 @author: callm
 """
+#Group Final Project Plan
+#Project Topic:Piano
+#Group name: Teddy Bears
+#Notes:The players will see the keys of a piano once they open the file.
+      #Use the mouse to click the key in order to make a sound.
 
 import pygame
 import sys
