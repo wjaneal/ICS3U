@@ -10,13 +10,14 @@ Created on Mon Nov 20 13:20:43 2017
 #Notes:The players will see the keys of a piano once they open the file.
       #Use the mouse to click the key in order to make a sound.
 
+#import required sources
 import pygame
 import sys
 from tkinter import *
 pygame.init()
 
 
-
+#Functions that sets the key tone
 def value_Cs():
     num1.set("C#")
     sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\c1.wav")
@@ -117,7 +118,7 @@ topframe = Frame(root)
 topframe.pack(side = TOP)
 txtDisplay=Entry(frame, textvariable = num1, bd=20, insertwidth =1, font=30, justify="center", width=4,)
 txtDisplay.pack( side = TOP)
-
+#Apperance of the keyboard
 button1 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="C# ", bg="black",fg="white",command=value_Cs)
 button1.pack(side =LEFT)
 button22 = Button(topframe, state=DISABLED, height = 7, width=1, padx=0, pady=0, relief=RIDGE)
@@ -304,7 +305,7 @@ def qsort(shelf, left, right):
         qsort(shelf, left, pivot_new_index - 1)
         qsort(shelf, pivot_new_index + 1, right)
 
-def randomize():
+def randomize():#Sort the blocks randomly
     disable_keys()
     clear()
     target = list(range(10))
@@ -394,6 +395,6 @@ if __name__=="__main__":
     
     
     
-pygame tommy
+#pygame tommy
 print ("WE PLAY A SONG , YOU GUESS EACH NOTE")
 PLAY 
