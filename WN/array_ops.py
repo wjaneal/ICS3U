@@ -5,7 +5,7 @@
 def Largest(List1):
     largest = List1[0]
     for i in range(1,len(List1)):
-        if largest < List1[i-1]:
+        if largest < List1(i):
             largest = List1[i-1]
     return Largest
 n = 3 #How many groups to sort into
@@ -15,10 +15,10 @@ not_done = True
 #repeat until List1 is empty:
 while not_done==True:
     for i in range(0,len(Groups)):
-        groups[i] = largest(List1)
+        Groups[i] = Largest(List1)
     for i in range(0,len(Groups)):
-        groups[n+1-i]= largest(List1)
-print(groups)
+        Groups[n+1-i]= Largest(List1)
+        print(Groups)
 
     #for each group, 1,2,3...n distribute the largest item in the list
     #for each group, n,n-1,n-2...1 distribute the largest item in the list

@@ -91,9 +91,9 @@ def button(msg,x,y,w,h,ic,ac,action=None):
         if click[0] == 1 and action != None:
             action()
     else:
-        pygame.draw.rect(gameDisplay, ic,(x,y,w,h))
+        pygame.draw.rect(gameDisplay, (122,154,67),(x,y,w,h))
     smallText = pygame.font.SysFont("comicsanms",20)
-    textSurf, textRect = test_objects(msg, smallText)
+    textSurf, textRect = text_objects(msg, smallText)
     textRect.center = ((x+(w/2),(y+(h/2))))
     gameDisplay.blit(textSurf, textRect)
 #Design the conditions outside of playing 
@@ -118,8 +118,8 @@ def paused():
                 pygame.quit
                 quit()
                 
-        button("Continue",150,450,100,50,green,bright_green,unpause)
-        button("Quit",550,450,100,50,red,bright_red,quitgame)
+        button("Continue",150,450,100,50,"green","yellow",unpause)
+        button("Quit",550,450,100,50,"red","orange",quitgame)
         
         pygame.display.update()
         clock.tick(15)
@@ -140,8 +140,8 @@ def game_intro():
         TextRect.center = ((display_width/2),(display_height/2))
         gameDisplay.blit(TextSurf, TextRect) 
         #Choices setting
-        button("GO!",150,450,100,50,green,bright_green,game_loop)
-        button("Quit",550,450,100,50,red,bright_red,quitgame)
+        button("GO!",150,450,100,50,"green","yellow",game_loop())
+        button("Quit",550,450,100,50,"red","orange",quitgame())
         
         pygame.display.update()
         clock.tick(15)
@@ -175,5 +175,6 @@ def game_loop():
                 quit()
                 
     
-    
+game_intro()
+game_loop()
     
