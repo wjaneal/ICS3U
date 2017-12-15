@@ -14,7 +14,7 @@ import pygame
 import time
 import random
 
-pygame.init()
+pygame.init()#Loading game
 #Set the window size and bgm
 beginning_sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle5-dd000438-fa1e-4f42-8488-399dc77fa412.wav")
 display_width = 800
@@ -36,7 +36,7 @@ Mario_width = 73#Mario's size
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption("Emma's Game")#Title
 clock = pygame.time.Clock()
-
+#Insert character's image
 MarioImg = pygame.image.load("C:\\Users\\fy\\Documents\\ICS3U\\TeddyBears\\Emmafinal\\Mario.gif")
 gameIcon = pygame.image.load("C:\\Users\\fy\\Documents\\ICS3U\\TeddyBears\\Emmafinal\\icon.gif")
 
@@ -46,15 +46,15 @@ pause = False
 #crash = True
 
 def things_dodged(count):
-    font = pygame.font.SysFont("serif", 25)
+    font = pygame.font.SysFont("serif", 25)#Design the look of the font
     text = font.render("Dodged: "+str(count), True, black)
     gameDisplay.blit(text,(0,0))
     
 def things(thingx, thingy,thingw, thingh, color):
     pygame.draw.rect(gameDisplay, color, [thingx, thingy,thingw, thingh])
     
-def car(x,y):
-    gameDisplay.blit(MarioImg,(x,y))
+def Mario(x,y):
+    gameDisplay.blit(MarioImg,(x,y))#Display Mario image
     
 def text_objects(text, font):
     textSurface = font.render(text, True, black)
@@ -66,8 +66,10 @@ def crash():
     
     #pygame.mixer.music.stop()
     
-    largeText = pygame.font.SysFont("comicsansms",115)
-    TextSurf, TextRect = text_objects("You crashed", largeText)
+    largeText = pygame.font.SysFont("comicsansms",115)#Font design of the text
+                                                      #shown when player loses
+                                                      #the game
+    TextSurf, TextRect = text_objects("You crashed", largeText)#Content of text
     TextRect.center = ((display_width/2),(display_height/2))
     gameDisplay.blit(TextSurf, TextRect)
     
@@ -106,6 +108,8 @@ def unpause():
     pause = False
     
 def paused():
+#We come to our pause function when we pause the game generally because maybe 
+#somgone comes in the room and asks you a question, etc.
     
     largeText = pygame.font.SysFont("comicsansms",115)
     TextSurf, TextRect = text_objects("Paused", largeText)
@@ -117,7 +121,7 @@ def paused():
             if event.type == pygame.QUIT:
                 pygame.quit
                 quit()
-                
+#Insert two buttons for player's choices                
         button("Continue",150,450,100,50,"green","yellow",unpause)
         button("Quit",550,450,100,50,"red","orange",quitgame)
         
