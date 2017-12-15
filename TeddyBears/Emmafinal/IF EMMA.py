@@ -5,9 +5,9 @@ Created on Fri Dec  1 01:08:56 2017
 @author: fy
 """
 '''
-INDIVIDUAL EMMA'S GAME: MARIO RACEY
-
-
+INDIVIDUAL EMMA'S GAME: MARIO RACEY:
+The player could drive Mario horizontally in order to defend enemies and earn the score.
+The game would end if Mario crashs into the enemies.
 '''
 #Import required modules
 import pygame
@@ -70,21 +70,21 @@ def crash():
                                                       #shown when player loses
                                                       #the game
     TextSurf, TextRect = text_objects("You crashed", largeText)#Content of text
-    TextRect.center = ((display_width/2),(display_height/2))
-    gameDisplay.blit(TextSurf, TextRect)
-    
+    TextRect.center = ((display_width/2),(display_height/2))#Location of the text
+    gameDisplay.blit(TextSurf, TextRect)#Load the text
+    #Give a choice to quit the game
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit
                 quit()
-                
+        #Settings about choices        
         button("Play Again",150,450,100,50,green,bright_green,game_loop)
         button("Quit",550,450,100,50,red,bright_red,quitgame)
-        
+        #Display the selections
         pygame.display.update()
         clock.tick(15)
-        
+#Design the way to play this game-using mouse to click        
 def button(msg,x,y,w,h,ic,ac,action=None):
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
@@ -139,10 +139,10 @@ def game_intro():
                 quit()
         
         gameDisplay.fill(white)        
-        largeText = pygame.font.SysFont("comicsansms",115)
-        TextSurf, TextRect = text_objects("Emma's game", largeText)
-        TextRect.center = ((display_width/2),(display_height/2))
-        gameDisplay.blit(TextSurf, TextRect) 
+        largeText = pygame.font.SysFont("comicsansms",115)#Type of font and size
+        TextSurf, TextRect = text_objects("Emma's game", largeText)#Content of the text
+        TextRect.center = ((display_width/2),(display_height/2))#Location of the text
+        gameDisplay.blit(TextSurf, TextRect)#Load the text 
         #Choices setting
         button("GO!",150,450,100,50,"green","yellow",game_loop())
         button("Quit",550,450,100,50,"red","orange",quitgame())
@@ -178,7 +178,7 @@ def game_loop():
                 pygame.quit()
                 quit()
                 
-    
+#Start the program    
 game_intro()
 game_loop()
     
