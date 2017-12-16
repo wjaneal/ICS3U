@@ -5,16 +5,16 @@ Created on Fri Dec  1 01:08:56 2017
 @author: fy
 """
 '''
-INDIVIDUAL EMMA'S GAME: MARIO RACEY
-
-
+INDIVIDUAL EMMA'S GAME: MARIO RACEY:
+The player could drive Mario horizontally in order to defend enemies and earn the score.
+The game would end if Mario crashs into the enemies.
 '''
 #Import required modules
 import pygame
 import time
 import random
 
-pygame.init()
+pygame.init()#Loading game
 #Set the window size and bgm
 beginning_sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle5-dd000438-fa1e-4f42-8488-399dc77fa412.wav")
 display_width = 800
@@ -36,7 +36,7 @@ Mario_width = 73#Mario's size
 gameDisplay = pygame.display.set_mode((display_width,display_height))
 pygame.display.set_caption("Emma's Game")#Title
 clock = pygame.time.Clock()
-
+#Insert character's image
 MarioImg = pygame.image.load("C:\\Users\\fy\\Documents\\ICS3U\\TeddyBears\\Emmafinal\\Mario.gif")
 gameIcon = pygame.image.load("C:\\Users\\fy\\Documents\\ICS3U\\TeddyBears\\Emmafinal\\icon.gif")
 
@@ -46,15 +46,15 @@ pause = False
 #crash = True
 
 def things_dodged(count):
-    font = pygame.font.SysFont("serif", 25)
+    font = pygame.font.SysFont("serif", 25)#Design the look of the font
     text = font.render("Dodged: "+str(count), True, black)
     gameDisplay.blit(text,(0,0))
     
 def things(thingx, thingy,thingw, thingh, color):
     pygame.draw.rect(gameDisplay, color, [thingx, thingy,thingw, thingh])
     
-def car(x,y):
-    gameDisplay.blit(MarioImg,(x,y))
+def Mario(x,y):
+    gameDisplay.blit(MarioImg,(x,y))#Display Mario image
     
 def text_objects(text, font):
     textSurface = font.render(text, True, black)
@@ -66,23 +66,25 @@ def crash():
     
     #pygame.mixer.music.stop()
     
-    largeText = pygame.font.SysFont("comicsansms",115)
-    TextSurf, TextRect = text_objects("You crashed", largeText)
-    TextRect.center = ((display_width/2),(display_height/2))
-    gameDisplay.blit(TextSurf, TextRect)
-    
+    largeText = pygame.font.SysFont("comicsansms",115)#Font design of the text
+                                                      #shown when player loses
+                                                      #the game
+    TextSurf, TextRect = text_objects("You crashed", largeText)#Content of text
+    TextRect.center = ((display_width/2),(display_height/2))#Location of the text
+    gameDisplay.blit(TextSurf, TextRect)#Load the text
+    #Give a choice to quit the game
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 pygame.quit
                 quit()
-                
+        #Settings about choices        
         button("Play Again",150,450,100,50,green,bright_green,game_loop)
         button("Quit",550,450,100,50,red,bright_red,quitgame)
-        
+        #Display the selections
         pygame.display.update()
         clock.tick(15)
-        
+#Design the way to play this game-using mouse to click        
 def button(msg,x,y,w,h,ic,ac,action=None):
     mouse = pygame.mouse.get_pos()
     click = pygame.mouse.get_pressed()
@@ -91,9 +93,9 @@ def button(msg,x,y,w,h,ic,ac,action=None):
         if click[0] == 1 and action != None:
             action()
     else:
-        pygame.draw.rect(gameDisplay, ic,(x,y,w,h))
+        pygame.draw.rect(gameDisplay, (122,154,67),(x,y,w,h))
     smallText = pygame.font.SysFont("comicsanms",20)
-    textSurf, textRect = test_objects(msg, smallText)
+    textSurf, textRect = text_objects(msg, smallText)
     textRect.center = ((x+(w/2),(y+(h/2))))
     gameDisplay.blit(textSurf, textRect)
 #Design the conditions outside of playing 
@@ -106,6 +108,8 @@ def unpause():
     pause = False
     
 def paused():
+#We come to our pause function when we pause the game generally because maybe 
+#somgone comes in the room and asks you a question, etc.
     
     largeText = pygame.font.SysFont("comicsansms",115)
     TextSurf, TextRect = text_objects("Paused", largeText)
@@ -117,9 +121,9 @@ def paused():
             if event.type == pygame.QUIT:
                 pygame.quit
                 quit()
-                
-        button("Continue",150,450,100,50,green,bright_green,unpause)
-        button("Quit",550,450,100,50,red,bright_red,quitgame)
+#Insert two buttons for player's choices                
+        button("Continue",150,450,100,50,"green","yellow",unpause)
+        button("Quit",550,450,100,50,"red","orange",quitgame)
         
         pygame.display.update()
         clock.tick(15)
@@ -135,13 +139,13 @@ def game_intro():
                 quit()
         
         gameDisplay.fill(white)        
-        largeText = pygame.font.SysFont("comicsansms",115)
-        TextSurf, TextRect = text_objects("Emma's game", largeText)
-        TextRect.center = ((display_width/2),(display_height/2))
-        gameDisplay.blit(TextSurf, TextRect) 
+        largeText = pygame.font.SysFont("comicsansms",115)#Type of font and size
+        TextSurf, TextRect = text_objects("Emma's game", largeText)#Content of the text
+        TextRect.center = ((display_width/2),(display_height/2))#Location of the text
+        gameDisplay.blit(TextSurf, TextRect)#Load the text 
         #Choices setting
-        button("GO!",150,450,100,50,green,bright_green,game_loop)
-        button("Quit",550,450,100,50,red,bright_red,quitgame)
+        button("GO!",150,450,100,50,"green","yellow",game_loop())
+        button("Quit",550,450,100,50,"red","orange",quitgame())
         
         pygame.display.update()
         clock.tick(15)
@@ -174,6 +178,7 @@ def game_loop():
                 pygame.quit()
                 quit()
                 
-    
-    
+#Start the program    
+game_intro()
+game_loop()
     

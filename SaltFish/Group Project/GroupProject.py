@@ -3,7 +3,8 @@
 #Group Members:Brian,Charlotte,Cuzzi,Ishtar,Natalie,Yolanda
 #Topic: The Banker's Case
 #Functions of the Complete Program:
-#Displays 25 cases at the beginning of the game
+#Displays 26 cases at the beginning of the game
+#Displays remaining amounts of money
 #Displays the instructions about how many cases the player should choose at a time(3)
 #Makes the cases the player chooses disappear
 #Shows the offer from the bank after each round of choosing cases
