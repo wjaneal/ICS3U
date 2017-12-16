@@ -4,6 +4,7 @@
 Created on Thu Dec  7 13:08:57 2017
 @author: xueqianhe
 """
+#import picture files
 stave_image_filename = 'timg8.jpeg'
 mouse_image_filename = 'yinfu.png'
 note_image_filename = 'yinfu2.png'
@@ -17,6 +18,7 @@ from pygame.locals import *
 from sys import exit
 pygame.mixer.init()
 pygame.init()
+#import sound files
 sound40 = pygame.mixer.Sound('40-C4.wav')
 sound42 = pygame.mixer.Sound('42-D4.wav')
 sound44 = pygame.mixer.Sound('44-E4.wav')
@@ -42,7 +44,7 @@ sound55 = pygame.mixer.Sound('55-D5#.wav')
 sound58 = pygame.mixer.Sound('58-F5#.wav')
 sound60 = pygame.mixer.Sound('58-F5#.wav')
 sound62 = pygame.mixer.Sound('62-A5#.wav')
-                             
+#upload files
 screen = pygame.display.set_mode((900,696), 0, 32)
 pygame.display.set_caption("Notesboard")
 background = pygame.image.load(stave_image_filename).convert()
@@ -53,7 +55,7 @@ change_cursor = pygame.image.load(change_image_filename).convert_alpha()
 change2_cursor = pygame.image.load(change2_image_filename).convert_alpha()
 change3_cursor = pygame.image.load(change3_image_filename).convert_alpha()
 change4_cursor = pygame.image.load(change4_image_filename).convert_alpha()
-
+#set poordinate
 def loop():    
     x,y = 500,-500
     m,n = 500,-500
@@ -61,6 +63,7 @@ def loop():
     a,b = 500,-500
     c,d = 500,-500
     f,g = 500,-500
+    #while loop
     while True:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:            
