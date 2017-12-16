@@ -1,6 +1,6 @@
 #Individual Computer Programming Plan
 #Name: Charlotte Chen
-#Topic: Scanning Tunnelling Microscope
+#Topic: Scanning Tunneling Microscope
 #Functions of the Complete Program:
   #Connects to Arduino
   #Allows two Arduinos to communicate with each other(one sender and one reader)
