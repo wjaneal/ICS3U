@@ -290,5 +290,5 @@ class App(Tk):
 #Start the program:
 if __name__ == "__main__":
     app=App()
-    app.title('Scanning Tunnelling Microscope')
+    app.title('Scanning Tunneling Microscope')
     app.mainloop()
