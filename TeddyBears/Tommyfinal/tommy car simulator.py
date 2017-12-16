@@ -1,4 +1,5 @@
 
+
 #from Tkinter import *
 #import pyserial
 #import cv2
@@ -41,26 +42,26 @@ class App:
         #specifies a function, or (as in this
         #case) a bound method, which will be called when the button is clicked.
         
-        self.opendoor = tkinter.Button(f, text="openthedoor", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterup).grid(row=0, column=0)
-        self.trackmode = tkinter.Button(f, text="TrackMode", font = "Arial 24 bold",background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterforward).grid(row=1, column=0)
-        self.sit = tkinter.Button(f, text="Sitdown", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow", height=2, width=10,command=self.helicopterhover).grid(row=0, column=1)
-        self.carforward = tkinter.Button(f, text="Forward", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterbackwards).grid(row=1, column=1)
-        self.fastenseatbelt = tkinter.Button(f, text="Seatbelt On", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow", height=2, width=10,command=self.helicopterdown).grid(row=0, column=2)
-        self.ecomode = tkinter.Button(f, text="Ecomode", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicoptervx0).grid(row=1, column=2)
-        self.carengineon = tkinter.Button(f, text="engine on", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow", height=2, width=10,command=self.helicopteroff).grid(row=0, column=3)
-        self.carturnleft = tkinter.Button(f, text="Turn Left", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterleft).grid(row=2, column=0)
-        self.carbrake= tkinter.Button(f, text="Brake", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicoptervy0).grid(row=2, column=1)
-        self.carturnright = tkinter.Button(f, text="Turn Right", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterright).grid(row=2, column=2)
-        self.carbackward= tkinter.Button(f, text="Backward", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicoptertheta0).grid(row=3, column=1)
-        self.manualdrive = tkinter.Button(f, text="ManualDrive", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterturnright).grid(row=3, column=2)
-        self.carengineoff = tkinter.Button(f,text="engine off", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterturnofftheengine).grid(row=1, column=3)
-        self.unfastenseatbelt = tkinter.Button(f,text="unfasten SB", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterunfastenseatbelt).grid(row=2, column=3)
-        self.leavethecar = tkinter.Button(f,text="leave the car", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.helicopterleave).grid(row=3, column=3)
+        self.opendoor = tkinter.Button(f, text="openthedoor", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.opendoor).grid(row=0, column=0)
+        self.trackmode = tkinter.Button(f, text="TrackMode", font = "Arial 24 bold",background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.trackmode).grid(row=1, column=0)
+        self.sit = tkinter.Button(f, text="Sitdown", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow", height=2, width=10,command=self.sit).grid(row=0, column=1)
+        self.carforward = tkinter.Button(f, text="Forward", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.carforward).grid(row=1, column=1)
+        self.fastenseatbelt = tkinter.Button(f, text="Seatbelt On", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow", height=2, width=10,command=self.fastenseatbelt).grid(row=0, column=2)
+        self.ecomode = tkinter.Button(f, text="Ecomode", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.ecomode).grid(row=1, column=2)
+        self.carengineon = tkinter.Button(f, text="engine on", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow", height=2, width=10,command=self.carengineon).grid(row=0, column=3)
+        self.carturnleft = tkinter.Button(f, text="Turn Left", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.carturnleft).grid(row=2, column=0)
+        self.carbrake= tkinter.Button(f, text="Brake", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.carbrake).grid(row=2, column=1)
+        self.carturnright = tkinter.Button(f, text="Turn Right", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.carturnright).grid(row=2, column=2)
+        self.carbackward= tkinter.Button(f, text="Backward", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.carbackward).grid(row=3, column=1)
+        self.manualdrive = tkinter.Button(f, text="ManualDrive", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.manualdrive).grid(row=3, column=2)
+        self.carengineoff = tkinter.Button(f,text="engine off", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.carengineoff).grid(row=1, column=3)
+        self.unfastenseatbelt = tkinter.Button(f,text="unfasten SB", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.unfastenseatbelt).grid(row=2, column=3)
+        self.leavethecar = tkinter.Button(f,text="leave the car", font = "Arial 24 bold", background = "white",foreground = "black", activebackground="yellow",height=2, width=10,command=self.leavethecar).grid(row=3, column=3)
 
 
-        self.auto = tkinter.Button(f, text="AutoDrive", font = "Arial 24 bold", background = "red",foreground = "white", activebackground="yellow", height=2, width=10,command=self.autoflight).grid(row=3,column=0)
-        self.openlight = tkinter.Button(f,background = "black",activebackground="white",foreground = "white",text="headlight on", font = "Arial 24 bold", height=2, width=10,command=self.connect).grid(row=4,column=0)
-        self.closelight = tkinter.Button(f, background = "red", activebackground="white",foreground = "white", text="headlight off", font = "Arial 24 bold", height=2, width=10,command=self.disconnect).grid(row=4,column=1)
+        self.autodrive = tkinter.Button(f, text="AutoDrive", font = "Arial 24 bold", background = "red",foreground = "white", activebackground="yellow", height=2, width=10,command=self.autodrive).grid(row=3,column=0)
+        self.openlight = tkinter.Button(f,background = "black",activebackground="white",foreground = "white",text="headlight on", font = "Arial 24 bold", height=2, width=10,command=self.openlight).grid(row=4,column=0)
+        self.closelight = tkinter.Button(f, background = "red", activebackground="white",foreground = "white", text="headlight off", font = "Arial 24 bold", height=2, width=10,command=self.closelight).grid(row=4,column=1)
         self.exit = tkinter.Button(f, text="Exit", font = "Arial 24 bold", activebackground="red",foreground = "white", background = "green", height=2, width=10, command=f.destroy).grid(row=4,column=3)
 
 
@@ -104,7 +105,7 @@ class App:
         Arduino_Conn.writechar("D250")
 
     def carforward(self):
-        #print "Moving the helicopter backwards"
+        print("Car is moving forward")
         Arduino_Conn.writechar("D000")
 
     def ecomode(self):
@@ -112,7 +113,7 @@ class App:
         Arduino_Conn.writechar("D080")
 
     def carbackward(self):
-        #print "Helicopter theta = 0"
+        print("Car is moving backward")
         Arduino_Conn.writechar("C128")
         
     def manualdrive(self):
@@ -120,23 +121,28 @@ class App:
         Arduino_Conn.writechar("B000")
 
     def carbrake(self):
-        #print "Helicopter Vy = 0"
+        print ("Car is braking")
         Arduino_Conn.writechar("B100")
 
     def carturnleft(self):
+        print ("Car is turning left")
         Arduino_Conn.writechar("B911")
 
     def carturnright(self):
+        print ("Car is turning right")
         #print "Helicopter moving right"
         Arduino_Conn.writechar("B255")
         
     def carengineoff(self):
+        print("Car is shutting down")
         Arduino_Conn.writechar("B666")
         
-    def unfastenseatbelt(self):    
+    def unfastenseatbelt(self):   
+        print ("unfastenseatbelt")
         Arduino_Conn.writechar("B999")
         
-    def leavethecar(self):   
+    def leavethecar(self):
+        print ("you are leaving the car")
         Arduino_Conn.writechar("B111")
         
 
@@ -154,7 +160,7 @@ class App:
         else:
             Arduino_Conn.writechar("A"+str(level))
 
-    def autoflight(self):
+    def autodrive(self):
             count = 0
             delaytime = 1200
             while count < 18:
@@ -187,12 +193,12 @@ class App:
             
                 
                  
-    def connect(self):
+    def openlight(self):
         print ("The connection to the arduino is being established")
         Arduino_Conn.connection1 = Arduino_Conn.connection()
         print ("The connection seems to have been established")
     
-    def disconnect(self):
+    def closelight(self):
         Arduino_Conn.connection1.flushInput()
         Arduino_Conn.connection1.flushOutput()
         Arduino_Conn.connection1.close()
