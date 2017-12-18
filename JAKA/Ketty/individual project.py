@@ -12,11 +12,11 @@ if kind == "1":
         print ("Round",i+1,":")
         a = input("Scissors, rock and paper! Your choice:")
         b = int(random.random()*3)
-        if a == "S":
+        if a == "S" or a == "s":
             a = 0
-        if a == "R":
+        if a == "R" or a == "r":
             a = 1
-        if a == "P":
+        if a == "P" or a == "p":
             a = 2
         if a == 0 and b == 1:
             print ("Your choice is scissors, computer's choice is rock. You lose!")
