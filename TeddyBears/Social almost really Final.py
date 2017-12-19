@@ -108,7 +108,13 @@ def value_F1():
     sound = pygame.mixer.Sound("C:\\Users\\callm\\Desktop\\P.N\\c#.wav")
     sound.play()
     return
+def play_a_tune():
+    #Commands to play a set of notes
 
+
+def play_back_a_tune():
+    #Commands to play notes and have user play them back
+    #Respond with correct or incorrect
 root = Tk()
 frame = Frame(root)
 frame.pack()

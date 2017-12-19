@@ -6,7 +6,7 @@ Created on Thu Dec  7 13:08:57 2017
 @author: xueqianhe
 """
 
-stave_image_filename = 'timg.jpg'
+stave_image_filename = 'yinfu.jpg'
 mouse_image_filename = 'yinfu.png'
 note_image_filename = 'yinfu2.png'
 
