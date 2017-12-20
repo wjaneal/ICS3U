@@ -5,11 +5,28 @@ Created on Thu Nov 23 10:59:30 2017
 @author: 86509
 """
 
+
 import pygame
 import sys
 from tkinter import *
+from pygame.locals import *
 
-pygame.init()
+
+root = Tk()
+frame = Frame(root)
+frame.pack()
+
+root.title('PIANO')
+
+num1=StringVar()
+
+topframe = Frame(root)
+topframe.pack()
+txtDisplay=Entry(frame,textvariable = num1,bd=20,insertwidth =1,font =30, justify= 'center', width=4)
+txtDisplay.pack( side = TOP)
+
+
+
 def value_C4():
     num1.set("C4")
     sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/40-C4.wav")
@@ -130,19 +147,6 @@ def value_B5():
     sound = pygame.mixer.Sound("Desktop/Piano_Keys_wav/63-B5.wav")
     sound.play()
     return
-root = Tk()
-frame = Frame(root)
-frame.pack()
-
-root.title('PIANO')
-
-num1=StringVar()
-
-topframe = Frame(root)
-topframe.pack()
-txtDisplay=Entry(frame,textvariable = num1,bd=20,insertwidth =1,font =30, justify= 'center', width=4)
-txtDisplay.pack( side = TOP)
-
 button1 = Button(topframe,padx=8, height = 6, pady=8, bd=8, text="C4# ",bg="black",fg="white",command=value_C4s)
 button1.pack(side =LEFT)
 button22 = Button(topframe,state=DISABLED, height = 7, width=1, padx=0,pady=0, relief=RIDGE )
@@ -214,3 +218,6 @@ button13.pack(side = LEFT)
 button14 = Button(frame1,padx=16,pady=16,bd=8,height=8,text="B5",fg="black",command=value_B5)
 button14.pack(side = LEFT)
 root.mainloop()
+
+
+

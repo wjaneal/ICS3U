@@ -13,8 +13,8 @@ The game would end if Mario crashs into the enemies.
 import pygame
 import time
 import random
-
-pygame.init()#Loading game
+#Loading game
+pygame.init()
 #Set the window size and bgm
 beginning_sound = pygame.mixer.Sound("C:\\Users\\fy\\Music\\3426_draeseke_puzzle5-dd000438-fa1e-4f42-8488-399dc77fa412.wav")
 display_width = 800
