@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 """
+Created on Wed Dec 20 16:18:40 2017
+
+@author: fy
+"""
+
+# -*- coding: utf-8 -*-
+"""
 Created on Mon Nov 20 13:20:43 2017
 
 @author: callm
@@ -72,7 +79,8 @@ buttons = []
 #for i in range(......):
 for i in range(0,len(Notes)):
     #buttons.append(Button(.....))
-    buttons.append(Button(topframe,padx=8, height = 6, pady=8, bd=8, text="C# ", bg="black",fg="white",command=values(i)))
+    buttons.append(Button(topframe,padx=8, height = 6, pady=8, bd=8, text=Tunes[i], bg="black",fg="white",command=values(i)))
+    buttons.append(Button(frame1,padx=16, pady=16, bd=8,height = 8, text=Tunes[i],fg="black",command=values(i)))
     #pack buttons
     buttons[i].pack(side =LEFT)
     '''
@@ -108,6 +116,7 @@ buttonnew.pack(side =LEFT)
 frame1 = Frame(root)
 frame1.pack( side = TOP )
 
+'''
 button1 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="C",fg="black",command=value_C)
 button1.pack(side =LEFT)
 button2 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="D",fg="black",command=value_D)
@@ -132,18 +141,18 @@ button10 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="E1",fg="black"
 button10.pack(side =LEFT)
 button11 = Button(frame1,padx=16, pady=16, bd=8,height = 8, text="F1",fg="black",command=value_F1)
 button11.pack(side =LEFT)
-
+'''
 root.mainloop()
 
 # -*- coding: utf-8 -*-
-"""
 
+'''
 Created on Fri Dec  8 13:36:56 2017
 
 @author: fy
-"""
 
-"""
+
+
 
 GROUP FINAL EMMA:  sorting_animation.py
 
@@ -158,7 +167,7 @@ stretched to rectangles by shapesize()
  ---------------------------------------
        To exit press space button
  ---------------------------------------
-
+'''
 # Import required modules
 from turtle import * 
 import random
@@ -357,4 +366,3 @@ if __name__=="__main__":
 #pygame tommy
 print ("WE PLAY A SONG , YOU GUESS EACH NOTE")
 PLAY 
-"""
