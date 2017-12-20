@@ -1,0 +1,40 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Nov  3 13:05:17 2017
+
+@author: app
+"""
+import random
+
+print("input your name!")
+name=input("")
+print(name,"Welcome to the lottery choose")
+lottery=int(input())
+print("input the money you want to invest")
+money=int(input())
+result=int(random.random*10+1)
+answer=result
+number=money/2
+while
+prize=()
+print("prize",prize)
+
+
+
+
+def seven_of_seven():
+    prize=1000000
+    return prize 
+
+def six_of_seven():
+    prize=600000
+    return prize
+
+def five_of_seven():
+    prize=50000
+    return prize
+
+def four_of_seven():
+    prize=100
+    return prize
