@@ -107,8 +107,8 @@ class MenuBar(tkinter.Menu):
         gamesMenu.add_command(label="guess numbers", command=self.GuessNum)
         gamesMenu.add_command(label="Exit", command=self.quit)
         self.tip_label=tkinter.Label(text="SRP is finished! ").grid(row=6,column=0)
-        self.tip1_label=tkinter.Label(text="Besides, through the experience.").grid(row=7,column=0)
-        self.tip2_label=tkinter.Label(text="I found that Guess Number can't be played in the tkinter.").grid(row=8,column=0)
+        self.tip1_label=tkinter.Label(text="You can input the first letter of SRP or print the whole name of them,").grid(row=7,column=0)
+        self.tip2_label=tkinter.Label(text="like paper or rock.").grid(row=8,column=0)
         self.tip3_label=tkinter.Label(text="My new games are coming soon!").grid(row=9,column=0)
         self.tip4_label=tkinter.Label(text="Thanks for your playing!").grid(row=10,column=0)
     #define if you want to quit the program
