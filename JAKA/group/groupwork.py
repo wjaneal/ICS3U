@@ -11,22 +11,10 @@ for i in range(4):
 
 
 top = Tk()
-CheckVar1 = IntVar()
-CheckVar2 = IntVar()
-CheckVar3 = IntVar()
-CheckVar4 = IntVar()
-CheckVar5 = IntVar()
-CheckVar6 = IntVar()
-CheckVar7 = IntVar()
-CheckVar8 = IntVar()
-CheckVar9 = IntVar()
-CheckVar10 = IntVar()
-CheckVar11 = IntVar()
-CheckVar12 = IntVar()
-CheckVar13 = IntVar()
-CheckVar14 = IntVar()
-CheckVar15 = IntVar()
-CheckVar16 = IntVar()
+CheckVar=[]
+for i in range(0,16):
+    CheckVar.append(IntVar())
+    
 r=StringVar()
 def show_picture1():
     P1=Label(top,image=photo1).grid(row=1,column=5)
@@ -118,61 +106,23 @@ Button15 = Button(top, image = photo15, command=show_picture15).grid(row = 7, co
 photo16 = PhotoImage(file="red (4).png")
 Button16 = Button(top, image = photo16, command=show_picture16).grid(row = 7, column = 3)
 
+C=[]
+for i in range(0,4):
+    C.append(Checkbutton(top, variable = CheckVar[i],height=5,width = 5).grid(row = 2, column = i))
 
+for i in range(4,8):
+    C.append(Checkbutton(top, variable = CheckVar[i],height=5,width = 5).grid(row = 4, column = i-4))
 
-C1 = Checkbutton(top, variable = CheckVar1, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 2, column = 0)
-C2 = Checkbutton(top, variable = CheckVar2, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 2, column = 1)
-C3 = Checkbutton(top, variable = CheckVar3, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 2, column = 2)
-C4 = Checkbutton(top, variable = CheckVar4, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 2, column = 3)
-C5 = Checkbutton(top, variable = CheckVar5, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 4, column = 0)
-C6 = Checkbutton(top, variable = CheckVar6, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 4, column = 1)
-C7 = Checkbutton(top, variable = CheckVar7, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 4, column = 2)
-C8 = Checkbutton(top, variable = CheckVar8, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 4, column = 3)
-C9 = Checkbutton(top, variable = CheckVar9, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 6, column = 0)
-C10 = Checkbutton(top, variable = CheckVar10, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 6, column = 1)
-C11 = Checkbutton(top, variable = CheckVar11, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 6, column = 2)
-C12 = Checkbutton(top, variable = CheckVar12, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 6, column = 3)
-C13 = Checkbutton(top, variable = CheckVar13, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 8, column = 0)
-C14 = Checkbutton(top, variable = CheckVar14, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 8, column = 1)
-C15 = Checkbutton(top, variable = CheckVar15, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 8, column = 2)
-C16 = Checkbutton(top, variable = CheckVar16, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 8, column = 3)
+for i in range(8,12):
+    C.append(Checkbutton(top, variable = CheckVar[i],height=5,width = 5).grid(row = 6, column = i-8))
 
-Judge=Button(top,text="Enter",command=judge,bg="green")
-Judge.grid(row= 4,column= 7)
+for i in range(12,16):
+    C.append(Checkbutton(top, variable = CheckVar[i],height=5,width = 5).grid(row = 2, column = i-12))
 
-judge()
+Judge=Button(top,text="Enter",command=judge,bg="green")#set a button to enter
+Judge.grid(row= 4,column= 7)#the position of the button
+
+judge()#let the judge function work.
 
     
 top.mainloop()
