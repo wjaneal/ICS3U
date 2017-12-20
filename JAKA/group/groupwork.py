@@ -2,32 +2,24 @@ from tkinter import *
 import tkinter
 import random
 
-list2=[4,4,4,4]
+'''separate player's choice and computer's choice in two lists
+player's choice：list2
+computer's choice: list1'''
+list2=[4,4,4,4]#initial the elements to ensure none is correct at the beginning
 list1=[]
-time=0
+#make the computer randomly select the features
 for i in range(4):
     a= random.randrange(4)
     list1.append(a)
 
 
 top = Tk()
-CheckVar1 = IntVar()
-CheckVar2 = IntVar()
-CheckVar3 = IntVar()
-CheckVar4 = IntVar()
-CheckVar5 = IntVar()
-CheckVar6 = IntVar()
-CheckVar7 = IntVar()
-CheckVar8 = IntVar()
-CheckVar9 = IntVar()
-CheckVar10 = IntVar()
-CheckVar11 = IntVar()
-CheckVar12 = IntVar()
-CheckVar13 = IntVar()
-CheckVar14 = IntVar()
-CheckVar15 = IntVar()
-CheckVar16 = IntVar()
-r=StringVar()
+CheckVar=[]
+for i in range(0,16):
+    CheckVar.append(IntVar())
+    
+r=StringVar()#get the value for right
+
 def show_picture1():
     P1=Label(top,image=photo1).grid(row=1,column=5)
     list2[0]=0
@@ -76,103 +68,57 @@ def show_picture15():
 def show_picture16():
     list2[3]=3
     P8=Label(top,image=photo16).grid(row=3,column=6)
+
+#define the judge function
 def judge():
-    right=0
-    for i in range(4):
+    right=0#initial value for right ones is zero
+    for i in range(4):#compare list1 with list2 to determine how many is right
         if list1[i]==list2[i]:
             right+=1
-    r.set(str(right))
-    Label_r=Label(textvariable=r).grid(row=1,column=9)
+    r.set(str(right))#convert the amount into string
+    Label_r=Label(textvariable=r).grid(row=1,column=9)#display on the lable how many is right
             
     
-photo1 = PhotoImage(file="yellow.png")
-Button1 = Button(top, image = photo1, command=show_picture1).grid(row = 1, column = 0)
-photo2 = PhotoImage(file="blue.png")
-Button2 = Button(top, image = photo2, command=show_picture2).grid(row = 1, column = 1)
-photo3 = PhotoImage(file="green.png")
-Button3 = Button(top, image = photo3, command=show_picture3).grid(row = 1, column = 2)
-photo4 = PhotoImage(file="red.png")
-Button4 = Button(top, image = photo4, command=show_picture4).grid(row = 1, column = 3)
-photo5 = PhotoImage(file="yellow.gif")
-Button5 = Button(top, image = photo5, command=show_picture5).grid(row = 3, column = 0)
-photo6 = PhotoImage(file="blue (2).png")
-Button6 = Button(top, image = photo6, command=show_picture6).grid(row = 3, column = 1)
-photo7 = PhotoImage(file="green (2).png")
-Button7 = Button(top, image = photo7, command=show_picture7).grid(row = 3, column = 2)
-photo8 = PhotoImage(file="red (2).png")
-Button8 = Button(top, image = photo8, command=show_picture8).grid(row = 3, column = 3)
-photo9 = PhotoImage(file="yellow (2).png")
-Button9 = Button(top, image = photo9, command=show_picture9).grid(row = 5, column = 0)
-photo10 = PhotoImage(file="blue (3).png")
-Button10 = Button(top, image = photo10, command=show_picture10).grid(row = 5, column = 1)
-photo11 = PhotoImage(file="green (3).png")
-Button11 = Button(top, image = photo11, command=show_picture11).grid(row = 5, column = 2)
-photo12 = PhotoImage(file="red (3).png")
-Button12 = Button(top, image = photo12, command=show_picture12).grid(row = 5, column = 3)
-photo13 = PhotoImage(file="yellow (3).png")
-Button13 = Button(top, image = photo13, command=show_picture13).grid(row = 7, column = 0)
-photo14 = PhotoImage(file="blue (4).png")
-Button14 = Button(top, image = photo14, command=show_picture14).grid(row = 7, column = 1)
-photo15 = PhotoImage(file="green (4).png")
-Button15 = Button(top, image = photo15, command=show_picture15).grid(row = 7, column = 2)
-photo16 = PhotoImage(file="red (4).png")
-Button16 = Button(top, image = photo16, command=show_picture16).grid(row = 7, column = 3)
+files = ["yellow.png","blue.png","green.png","red.png","yellow.gif","blue (2).png","green (2).png","red (2).png","yellow (2).png","blue (3).png","green (3).png","red (3).png","yellow (3).png","blue (4).png","green (4).png","red (4).png"]
+photo = []
+picture_functions = [show_picture1, show_picture2,show_picture3,show_picture4,show_picture5,show_picture6,show_picture7,show_picture8,show_picture9,show_picture10,show_picture11,show_picture12,show_picture13,show_picture14,show_picture15,show_picture16]
+Buttons = []
+for i in range(0,4):
+    photo.append(PhotoImage(file=files[i]))
+for i in range(0,4):
+    Buttons.append(Button(top, image = photo[i], command=picture_functions[i]).grid(row = 1, column = i))
+for i in range(4,8):
+    photo.append(PhotoImage(file=files[i]))
+for i in range(4,8):
+    Buttons.append(Button(top, image = photo[i], command=picture_functions[i]).grid(row = 3, column = i-4))
+for i in range(8,12):
+    photo.append(PhotoImage(file=files[i]))
+for i in range(8,12):
+    Buttons.append(Button(top, image = photo[i], command=picture_functions[i]).grid(row = 5, column = i-8))
+for i in range(12,16):
+    photo.append(PhotoImage(file=files[i]))
+for i in range(12,16):
+    Buttons.append(Button(top, image = photo[i], command=picture_functions[i]).grid(row = 7, column = i-12))
+   
 
+#arrange all check buttons in a list and set their positions
+C=[]
+for i in range(0,4):
+    C.append(Checkbutton(top, variable = CheckVar[i],height=5,width = 5).grid(row = 2, column = i))
 
+for i in range(4,8):
+    C.append(Checkbutton(top, variable = CheckVar[i],height=5,width = 5).grid(row = 4, column = i-4))
 
-C1 = Checkbutton(top, variable = CheckVar1, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 2, column = 0)
-C2 = Checkbutton(top, variable = CheckVar2, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 2, column = 1)
-C3 = Checkbutton(top, variable = CheckVar3, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 2, column = 2)
-C4 = Checkbutton(top, variable = CheckVar4, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 2, column = 3)
-C5 = Checkbutton(top, variable = CheckVar5, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 4, column = 0)
-C6 = Checkbutton(top, variable = CheckVar6, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 4, column = 1)
-C7 = Checkbutton(top, variable = CheckVar7, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 4, column = 2)
-C8 = Checkbutton(top, variable = CheckVar8, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 4, column = 3)
-C9 = Checkbutton(top, variable = CheckVar9, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 6, column = 0)
-C10 = Checkbutton(top, variable = CheckVar10, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 6, column = 1)
-C11 = Checkbutton(top, variable = CheckVar11, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 6, column = 2)
-C12 = Checkbutton(top, variable = CheckVar12, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 6, column = 3)
-C13 = Checkbutton(top, variable = CheckVar13, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 8, column = 0)
-C14 = Checkbutton(top, variable = CheckVar14, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 8, column = 1)
-C15 = Checkbutton(top, variable = CheckVar15, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 8, column = 2)
-C16 = Checkbutton(top, variable = CheckVar16, \
- onvalue = 1, offvalue = 0, height=5, \
- width = 5).grid(row = 8, column = 3)
+for i in range(8,12):
+    C.append(Checkbutton(top, variable = CheckVar[i],height=5,width = 5).grid(row = 6, column = i-8))
 
-Judge=Button(top,text="Enter",command=judge,bg="green")
-Judge.grid(row= 4,column= 7)
+for i in range(12,16):
+    C.append(Checkbutton(top, variable = CheckVar[i],height=5,width = 5).grid(row = 2, column = i-12))
 
-judge()
+Judge=Button(top,text="Enter",command=judge,bg="green")#set a button to enter
+Judge.grid(row= 4,column= 7)#the position of the button
+
+judge()#let the judge function work.
 
     
 top.mainloop()
