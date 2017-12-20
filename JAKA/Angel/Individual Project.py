@@ -6,7 +6,11 @@ WIDTH=300
 HEIGHT=500
 FPS=30
 
-img_dir=path.join(path.dirname(__file__),"GitHub/ICS3U/JAKA/Angel")
+img_dir=path.join(path.dirname(__file__))
+'''pygame error:
+
+if doesn't work, change to this:
+img_dir=path.join(path.dirname(__file__),"GitHub/ICS3U/JAKA/Angel")'''
 
 #define colors
 BLACK=(0,0,0)
